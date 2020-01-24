@@ -58,7 +58,7 @@ public final class QueryUtils {
 
                 long time = properties.getLong("time");
 
-                String magnitude = properties.getString("mag");
+                double magnitude = properties.getDouble("mag");
                 String location = properties.getString("place");
 
 
