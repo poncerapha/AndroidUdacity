@@ -28,7 +28,6 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         super(context, 0, earthquakes);
     }
 
-
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -73,10 +72,8 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
 
         GradientDrawable magnitudeCircle = (GradientDrawable) magnitudeView.getBackground();
 
-        // Obtenha a cor de fundo apropriada, baseada na magnitude do terremoto atual
         int magnitudeColor = getMagnitudeColor(currentEarthquake.getmMagnitude());
 
-        // Configure a cor no círculo de magnitude
         magnitudeCircle.setColor(magnitudeColor);
 
         return listItemView;
@@ -87,9 +84,6 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         return dateFormat.format(dateObject);
     }
 
-    /**
-     * Retorna a data string formatada (i.e. "4:30 PM") de um objeto Date.
-     */
     private String formatTime(Date dateObject) {
         SimpleDateFormat timeFormat = new SimpleDateFormat("h:mm a");
         return timeFormat.format(dateObject);
